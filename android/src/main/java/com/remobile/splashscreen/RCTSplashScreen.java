@@ -117,13 +117,11 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule implements Lifec
                 splashImageView.setImageResource(drawableId);
                 LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
                 splashImageView.setLayoutParams(layoutParams);
-                splashImageView.setMinimumHeight(display.getHeight());
-                splashImageView.setMinimumWidth(display.getWidth());
                 splashImageView.setBackgroundColor(Color.BLACK);
                 splashImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
                 // Create and show the dialog
-                splashDialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+                splashDialog = new Dialog(context, android.R.style.Theme_NoTitleBar_Fullscreen);
                 // check to see if the splash screen should be full screen
                 if ((currentActivity.getWindow().getAttributes().flags & WindowManager.LayoutParams.FLAG_FULLSCREEN)
                         == WindowManager.LayoutParams.FLAG_FULLSCREEN) {
